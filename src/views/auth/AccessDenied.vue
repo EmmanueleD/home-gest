@@ -2,6 +2,7 @@
 function navigateTo(url) {
   window.open(url, "_blank");
 }
+const logo = "/assets/img/emmd-logo.png";
 </script>
 <template>
   <div
@@ -49,11 +50,7 @@ function navigateTo(url) {
         @click="navigateTo('https://www.emmanueledurante.com')"
         class="flex align-items-center ml-2 w-4rem h-1rem cursor-pointer"
       >
-        <img
-          src="/assets/img/emmd-logo.png"
-          class="w-full h-auto"
-          alt="PrimeVue"
-        />
+        <img :src="logo" class="w-full h-auto" alt="PrimeVue" />
       </div>
     </div>
     <span class="mt-1 text-400 text-xs text-center">Copyright © 2024</span>

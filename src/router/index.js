@@ -22,12 +22,6 @@ const router = createRouter({
           component: () => import("@/views/inventario.vue"),
           meta: { requiresAuth: true },
         },
-        {
-          path: "/set-to-zero/:idItem",
-          name: "set-to-zero",
-          component: () => import("@/views/set-to-zero.vue"),
-          meta: { requiresAuth: true },
-        },
       ],
     },
     {
@@ -44,6 +38,11 @@ const router = createRouter({
       path: "/:pathMatch(.*)*",
       name: "not-found",
       component: () => import("@/views/auth/NotFound.vue"),
+    },
+    {
+      path: "/set-to-zero/:idItem",
+      name: "set-to-zero",
+      component: () => import("@/views/set-to-zero.vue"),
     },
   ],
 });
