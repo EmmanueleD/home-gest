@@ -30,16 +30,6 @@ const router = createRouter({
       component: () => import("@/views/auth/Access.vue"),
     },
     {
-      path: "/access-denied",
-      name: "access-denied",
-      component: () => import("@/views/auth/AccessDenied.vue"),
-    },
-    {
-      path: "/:pathMatch(.*)*",
-      name: "not-found",
-      component: () => import("@/views/auth/NotFound.vue"),
-    },
-    {
       path: "/set-to-zero/:idItem",
       name: "set-to-zero",
       component: () => import("@/views/set-to-zero.vue"),
