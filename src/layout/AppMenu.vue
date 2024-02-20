@@ -7,9 +7,6 @@ const authStore = useAuthStore();
 
 const model = ref([
   {
-    label: "Dev",
-  },
-  {
     label: "Gestión",
     items: [
       {

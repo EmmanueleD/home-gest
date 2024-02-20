@@ -30,7 +30,7 @@ async function setToZero() {
       showError(dbResp.value.event, dbResp.value.message);
     }
   } catch (error) {
-    showError("GU-ERR", error);
+    showError("ERROR", error);
   } finally {
     loading.value = false;
   }

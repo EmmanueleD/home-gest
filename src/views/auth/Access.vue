@@ -39,8 +39,7 @@ async function handleLogin() {
       showSuccess(supaAuthResp.value.event, "Login exitoso");
     }
   } catch (error) {
-    console.error("GU-ERR", error);
-    // showError("GU-ERR - Login error", error);
+    console.error("ERROR", error);
   } finally {
     loading.value = false;
     router.push("/");
@@ -66,7 +65,7 @@ async function handleRegister() {
       showSuccess(supaAuthResp.value.event, "Registro exitoso");
     }
   } catch (error) {
-    showError("GU-ERR REGISTER", error);
+    showError("ERROR REGISTER", error);
   } finally {
     loading.value = false;
   }
