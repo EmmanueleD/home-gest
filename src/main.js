@@ -3,6 +3,8 @@ import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 import "@/assets/layout/layout.scss";
 
+import OneSignalVuePlugin from "@onesignal/onesignal-vue3";
+
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
@@ -17,6 +19,9 @@ const app = createApp(App);
 
 app.use(pinia);
 app.use(router);
+app.use(OneSignalVuePlugin, {
+  appId: import.meta.env.VITE_ONESIGNAL_APP_ID,
+});
 
 PrimeVueConfigurator.init(app);
 

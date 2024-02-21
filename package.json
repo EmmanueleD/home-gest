@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@onesignal/onesignal-vue3": "^2.0.1",
     "@supabase/supabase-js": "^2.39.6",
     "chart.js": "^4.4.1",
     "install": "^0.13.0",
