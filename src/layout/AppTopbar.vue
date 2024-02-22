@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 import useSupabaseAuth from "@/composables/useSupabaseAuth";
 import useCustomToast from "@/composables/utils/useCustomToast";
 
-const { supaLogout, supaAuthResp } = useSupabaseAuth();
+const { supaSignOut, supaAuthResp } = useSupabaseAuth();
 const { showSuccess, showError } = useCustomToast();
 const { layoutConfig, onMenuToggle } = useLayout();
 
@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
 const handleSignOut = async () => {
   loading.value = true;
   try {
-    await supaLogout();
+    await supaSignOut();
     if (supaAuthResp.value.error) {
       showError(
         supaAuthResp.value.event,
